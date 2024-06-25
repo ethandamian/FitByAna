@@ -1,9 +1,10 @@
+import logo from '../images/fit-by-ana-logo.png';
 
 export default function FitByAnaLogo(props) {
 
     return (
         <>
-            <img src="src/assets/fit-by-ana-logo.png" alt="" {...props} />
+            <img src={logo} alt="Logo de Fit By Ana" {...props} />
         </>
     )
 }
