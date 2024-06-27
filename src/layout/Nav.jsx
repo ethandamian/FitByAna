@@ -84,7 +84,7 @@ export default function Nav() {
 
                         </li>
 
-                        <li><Link to="#about-me" className="font-bold text-base text-primary">Preguntas Frecuentes</Link></li>
+                        <li><Link to="#frecuent-questions" className="font-bold text-base text-primary" onClick={handleLinkClick} smooth>Preguntas Frecuentes</Link></li>
 
                     </ol>
                 </SheetContent>
