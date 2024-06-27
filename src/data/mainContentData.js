@@ -8,7 +8,7 @@ import watch from '../images/watch-mobile.webp'
 export const plans = [
     {
         image: salad,
-        title: "Rutina de Ejercicio + Plan de Alimentación",
+        title: `Rutina de Ejercicio ${String.fromCharCode(43)} Plan de Alimentación`,
         sufix: "la",
         includes: [
             "Rutina de entrenamiento personalizada en casa o gym.",
