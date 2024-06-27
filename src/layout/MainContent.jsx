@@ -1,4 +1,5 @@
 import { plans, products } from '../data/mainContentData';
+import { Link } from 'react-dom'
 import {
     Card,
     CardContent,
@@ -6,9 +7,19 @@ import {
     CardHeader
 } from "@/components/ui/card"
 
+import {
+    Accordion,
+    AccordionContent,
+    AccordionItem,
+    AccordionTrigger,
+} from "@/components/ui/accordion"
+
+
 import { Button } from "@/components/ui/button"
 import { Badge } from "@/components/ui/badge"
-import { GooglePlayButton, AppStoreButton, ButtonsContainer } from "react-mobile-app-button";
+import { GooglePlayButton, AppStoreButton } from "react-mobile-app-button";
+
+import InstagramIcon from "@/icons/InstagramIcon"
 
 import app from '../images/app-mobile.webp'
 
@@ -19,8 +30,9 @@ export default function MainContent() {
         <main className="px-8 my-[50px] grid gap-8">
             <section className="mb-[121px]" id='about-me' >
                 <p className="text-2xl font-bold text-primary mb-5">¡Hola!</p>
-                <p className="text-base font-medium mb-5">
-                    <span className="font-bold">Soy Ana Carmona</span> y comencé mi viaje en el mundo del ejercicio a los 15 años. Lo que empezó como una visita al gimnasio para mejorar mis hábitos, se transformó en una pasión por mantener un estilo de vida saludable y equilibrado. Descubrí que cuidar mi bienestar físico, mental y emocional era fundamental, y compartir este estilo de vida con otros se volvió mi misión. Este proyecto nació con el objetivo de motivar y ayudar a las personas a mejorar sus hábitos alimenticios y de ejercicio, demostrando que el esfuerzo y la dedicación son recompensados con una mejor salud física y mental.
+                <p className="text-base font-medium mb-5 text-balance">
+                    <span className="font-bold">Soy Ana Carmona</span> y comencé en el mundo del ejercicio a los 15 años. Lo que empezó como una visita al gimnasio se convirtió en una pasión por un estilo de vida saludable. Descubrí que cuidar mi bienestar físico, mental y emocional era fundamental, y compartir esto con otros se volvió mi misión. Este proyecto busca motivar y ayudar a mejorar los hábitos alimenticios y de ejercicio, demostrando que el esfuerzo vale la pena para nuestra salud.
+
                 </p>
                 <p className="font-bold mb-4">¡Únete y sé parte del mundo del fitness!</p>
 
@@ -48,6 +60,8 @@ export default function MainContent() {
                                         <li key={index} className=" font-medium">{include}</li>
                                     ))}
                                 </ul>
+                                <p className="text-[#828182] font-medium mb-4">El Plan de Alimentación se diseñará acorde a tus objetivos*</p>
+                                <p className="text-[#828182] font-medium">En caso de presentar alguna Patología (Ej. Diabetes) o lesión se recomienda acudir previamente con un especialista.*</p>
                             </CardContent>
                             <CardFooter>
                                 <Button className="w-full font-bold text-base">Adquirir</Button>
@@ -67,7 +81,7 @@ export default function MainContent() {
 
             <section>
                 <p className="text-center text-primary font-bold text-2xl mb-4">Productos</p>
-                <Card className="mb-4 border-gray-200 shadow-lg">
+                <Card className="mb-4 border-gray-200 shadow-lg " id="app">
                     <CardHeader>
 
                         <img className="mb-[21px]" src={app} alt="Applicacion de Seguimiento" />
@@ -110,7 +124,7 @@ export default function MainContent() {
 
                 {products.map((product, index) => (
                     <>
-                        <Card key={index} className="mb-4 border-gray-200 shadow-lg">
+                        <Card key={index} className="mb-4 border-gray-200 shadow-lg" id={product.id}>
                             <CardHeader>
                                 <Badge className="w-fit mt-4 bg-[#9747FF] text-[13px] mb-4">Envío Gratis</Badge>
                                 <div>
@@ -136,9 +150,62 @@ export default function MainContent() {
                 ))}
             </section>
 
-            <section id='frecuent-questions'></section>
+            <section id='frecuent-questions'>
+                <p className="text-center text-primary font-bold text-2xl mb-4">Preguntas frecuentes</p>
+                <Accordion type="single" collapsible className="w-full">
+                    <AccordionItem value="item-1">
+                        <AccordionTrigger className="text-primary font-semibold">¿Qué es Fit By Ana?</AccordionTrigger>
+                        <AccordionContent className="font-medium">
+                            Fit by Ana es un proyecto en donde damos asesorías nutricionales y rutinas de ejercicio personalizadas, acorde a los objetivos de cada persona, motivándolos cada día a dar lo mejor de sí mismos, dándoles seguimiento y compartiendo diferentes maneras de seguir un plan.
+                        </AccordionContent>
+                    </AccordionItem>
+                    <AccordionItem value="item-2">
+                        <AccordionTrigger className="text-primary font-semibold">¿Cómo es el proceso de Compra?</AccordionTrigger>
+                        <AccordionContent>
+                            <div className="mb-4">
+                                <p className="font-bold">Para Rutinas de Ejercicio y Planes de Alimentación</p>
+                                <p className="font-medium">Escoges el servicio y al dar click en el botón de “Adquirir”, te llevará a WhatsApp. Se te proporcionará el método de pago, al realizarlo envías un comprobante y se te dará un cuestionario, link para descargar la app, y unos pdfs. Al completar el cuestionario se realiza tu plan de alimentación o tu rutina de ejercicio.</p>
+                            </div>
+                            <div>
+                                <p className="font-bold">Para los productos:</p>
+                                <p className="font-medium">
+                                    Escoges el producto y al dar click en el botón de “Adquirir”, te llevará a WhatsApp. Se te proporcionará el método de pago, al realizarlo envías un comprobante y se te dará un cuestionario, al llenarlo se enviará tu producto hasta tu casa con envío gratis.
+                                </p>
+                            </div>
+                        </AccordionContent>
+                    </AccordionItem>
+                    <AccordionItem value="item-3">
+                        <AccordionTrigger className="text-primary font-semibold">¿El pago es mensual?</AccordionTrigger>
+                        <AccordionContent className="font-medium">
+                            Sí, se paga mes a mes. El plan de alimentación y la rutina de ejercicio está planeada para un mes. Con base a tu progreso se hace una renovación para tu siguiente mes. El objetivo es darle continuidad a tu proceso, pero puedes dejarlo cuando gustes.
+                        </AccordionContent>
+                    </AccordionItem>
+                    <AccordionItem value="item-4">
+                        <AccordionTrigger className="text-primary font-semibold">¿Cuánto tarda en llegar el plan?</AccordionTrigger>
+                        <AccordionContent className="font-medium">
+                            En un lapso de 24 hrs luego de realizar tu pago o depósito.
+                        </AccordionContent>
+                    </AccordionItem>
+                    <AccordionItem value="item-5">
+                        <AccordionTrigger className="text-primary font-semibold items-start">¿Todo es personalizado?</AccordionTrigger>
+                        <AccordionContent className="font-medium">
+                            Sí, tanto las rutinas como los planes de alimentación son totalmente personalizados, nos adaptamos completamente a ti :)
+                        </AccordionContent>
+                    </AccordionItem>
+                </Accordion>
+            </section>
 
-            <section id='social'></section>
-        </main>
+            <section id='social' className='flex justify-center'>
+
+
+                <a href="https://www.instagram.com/anafitnut?igsh=bmp4b3RvNmYxZmZk" target="_blank" rel="noopener noreferrer">
+                    <Button aschild>
+                        <InstagramIcon className="h-6 w-6 mr-4" />
+                        <p className="font-semibold">Sígueme en Instagram</p>
+                    </Button>
+
+                </a>
+            </section >
+        </main >
     )
 }
