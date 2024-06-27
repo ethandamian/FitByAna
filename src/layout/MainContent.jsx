@@ -94,12 +94,14 @@ export default function MainContent() {
                                 theme={"light"}
                                 title="Disponible en"
                                 height={60}
+                                width={200}
                             />
                             <AppStoreButton
                                 url="https://apps.apple.com/mx/app/seguimiento-nnutrimind/id1290972525?platform=iphone"
                                 theme={"light"}
                                 title="Disponible en"
                                 height={60}
+                                width={200}
                             />
 
                         </div>
