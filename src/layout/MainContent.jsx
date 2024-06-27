@@ -67,7 +67,7 @@ export default function MainContent() {
 
             <section>
                 <p className="text-center text-primary font-bold text-2xl mb-4">Productos</p>
-                <Card>
+                <Card className="mb-4 border-gray-200 shadow-lg">
                     <CardHeader>
 
                         <img className="mb-[21px]" src={app} alt="Applicacion de Seguimiento" />
@@ -77,14 +77,14 @@ export default function MainContent() {
                     <CardContent>
                         <p className="font-bold text-lg mb-4">Incluye:</p>
                         <ul className="my-6 ml-6 list-disc [&>li]:mt-2">
-                            <li>Dietas visuales con ingredientes.</li>
-                            <li>Mediciones de Evolución (Peso, Talla, Imc).</li>
-                            <li>Calendario de citas.</li>
-                            <li>Registro de Alimentos a través de Fotografías. </li>
-                            <li>Motivación diaria para el paciente. </li>
-                            <li>Actividad Física.</li>
-                            <li>Estado de ánimo del paciente.</li>
-                            <li>Metas diarias.</li>
+                            <li className="font-medium">Dietas visuales con ingredientes.</li>
+                            <li className="font-medium">Mediciones de Evolución (Peso, Talla, Imc).</li>
+                            <li className="font-medium">Calendario de citas.</li>
+                            <li className="font-medium">Registro de Alimentos a través de Fotografías. </li>
+                            <li className="font-medium">Motivación diaria para el paciente. </li>
+                            <li className="font-medium">Actividad Física.</li>
+                            <li className="font-medium">Estado de ánimo del paciente.</li>
+                            <li className="font-medium">Metas diarias.</li>
                         </ul>
                     </CardContent>
                     <CardFooter>

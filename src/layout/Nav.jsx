@@ -44,7 +44,7 @@ export default function Nav() {
                         <BarsIcon className="h-[32px] w-[32px] stroke-textColor" />
                     </Button>
                 </SheetTrigger>
-                <SheetContent className="w-[350px] h-fit">
+                <SheetContent className="w-[350px]">
                     <SheetHeader>
                         <SheetTitle>Menu</SheetTitle>
                     </SheetHeader>
