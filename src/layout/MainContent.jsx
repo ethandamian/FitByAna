@@ -25,6 +25,7 @@ import app from '../images/app-mobile.webp'
 
 
 export default function MainContent() {
+    const whatsappUrl = "https://api.whatsapp.com/send?phone=5215587705973&text=%F0%9F%98%80%20Hola%20Ana!%252C%20quisiera%20adquirir%20"
 
     return (
         <main className="px-8 my-[50px] grid gap-8">
@@ -60,11 +61,16 @@ export default function MainContent() {
                                         <li key={index} className=" font-medium">{include}</li>
                                     ))}
                                 </ul>
-                                <p className="text-[#828182] font-medium mb-4">El Plan de Alimentación se diseñará acorde a tus objetivos*</p>
                                 <p className="text-[#828182] font-medium">En caso de presentar alguna Patología (Ej. Diabetes) o lesión se recomienda acudir previamente con un especialista.*</p>
                             </CardContent>
                             <CardFooter>
-                                <Button className="w-full font-bold text-base">Adquirir</Button>
+                                <a href={whatsappUrl + plan.sufix + `%20${plan.title}`} target="_blank" rel="noopener noreferrer" className="w-full ">
+
+                                    <a href={whatsappUrl + plan.sufix + `%20${plan.title}`} target="_blank" rel="noopener noreferrer" className="w-full ">
+
+                                        <Button className=" w-full font-bold text-base">Adquirir</Button>
+                                    </a>
+                                </a>
                             </CardFooter>
                         </Card>
                     </>
@@ -142,7 +148,10 @@ export default function MainContent() {
                                 </ul>
                             </CardContent>
                             <CardFooter>
-                                <Button className="w-full font-bold text-base">Adquirir</Button>
+                                <a href={whatsappUrl + product.sufix + `%20${product.title}`} target="_blank" rel="noopener noreferrer" className="w-full ">
+
+                                    <Button className=" w-full font-bold text-base">Adquirir</Button>
+                                </a>
                             </CardFooter>
                         </Card>
                     </>
@@ -154,13 +163,13 @@ export default function MainContent() {
                 <p className="text-center text-primary font-bold text-2xl mb-4">Preguntas frecuentes</p>
                 <Accordion type="single" collapsible className="w-full">
                     <AccordionItem value="item-1">
-                        <AccordionTrigger className="text-primary font-semibold">¿Qué es Fit By Ana?</AccordionTrigger>
+                        <AccordionTrigger className="font-medim">¿Qué es Fit By Ana?</AccordionTrigger>
                         <AccordionContent className="font-medium">
                             Fit by Ana es un proyecto en donde damos asesorías nutricionales y rutinas de ejercicio personalizadas, acorde a los objetivos de cada persona, motivándolos cada día a dar lo mejor de sí mismos, dándoles seguimiento y compartiendo diferentes maneras de seguir un plan.
                         </AccordionContent>
                     </AccordionItem>
                     <AccordionItem value="item-2">
-                        <AccordionTrigger className="text-primary font-semibold">¿Cómo es el proceso de Compra?</AccordionTrigger>
+                        <AccordionTrigger className="font-medium">¿Cómo es el proceso de Compra?</AccordionTrigger>
                         <AccordionContent>
                             <div className="mb-4">
                                 <p className="font-bold">Para Rutinas de Ejercicio y Planes de Alimentación</p>
@@ -175,19 +184,19 @@ export default function MainContent() {
                         </AccordionContent>
                     </AccordionItem>
                     <AccordionItem value="item-3">
-                        <AccordionTrigger className="text-primary font-semibold">¿El pago es mensual?</AccordionTrigger>
+                        <AccordionTrigger className="font-medium">¿El pago es mensual?</AccordionTrigger>
                         <AccordionContent className="font-medium">
                             Sí, se paga mes a mes. El plan de alimentación y la rutina de ejercicio está planeada para un mes. Con base a tu progreso se hace una renovación para tu siguiente mes. El objetivo es darle continuidad a tu proceso, pero puedes dejarlo cuando gustes.
                         </AccordionContent>
                     </AccordionItem>
                     <AccordionItem value="item-4">
-                        <AccordionTrigger className="text-primary font-semibold">¿Cuánto tarda en llegar el plan?</AccordionTrigger>
+                        <AccordionTrigger className="font-medium">¿Cuánto tarda en llegar el plan?</AccordionTrigger>
                         <AccordionContent className="font-medium">
                             En un lapso de 24 hrs luego de realizar tu pago o depósito.
                         </AccordionContent>
                     </AccordionItem>
                     <AccordionItem value="item-5">
-                        <AccordionTrigger className="text-primary font-semibold items-start">¿Todo es personalizado?</AccordionTrigger>
+                        <AccordionTrigger className="font-medium items-start">¿Todo es personalizado?</AccordionTrigger>
                         <AccordionContent className="font-medium">
                             Sí, tanto las rutinas como los planes de alimentación son totalmente personalizados, nos adaptamos completamente a ti :)
                         </AccordionContent>

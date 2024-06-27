@@ -9,6 +9,7 @@ export const plans = [
     {
         image: salad,
         title: "Rutina de Ejercicio + Plan de Alimentación",
+        sufix: "la",
         includes: [
             "Rutina de entrenamiento personalizada en casa o gym.",
             "Videos e Imágenes explicando la ejecución de cada ejercicio.",
@@ -29,6 +30,7 @@ export const plans = [
     {
         image: food,
         title: "Plan de Alimentación",
+        sufix: "el",
         includes: [
             "Plan de alimentación personalizado.",
             "Diferentes opciones de comidas.",
@@ -46,8 +48,9 @@ export const plans = [
     {
         image: excercise,
         title: "Rutina de Ejercicio",
+        sufix: "la",
         includes: [
-            "Rutina de entrenamiento personalizada en casa o gym.",
+            "Rutina de entrenamiento personalizada en casa o gimnasio.",
             "Videos e Imágenes explicando la ejecución de cada ejercicio.",
             "Gráfica de grupos musculares trabajados.",
             "Acceso a grupo de WhatsApp."
@@ -59,6 +62,7 @@ export const plans = [
 export const products = [
     {
         id: "bands",
+        sufix: "las",
         image: bands,
         title: "Bandas Elásticas",
         description: "Al adquirir tus bandas de resistencia nos serán de gran ayuda ya que son un excelente complemento para poder llevar tu rutina de entrenamiento para casa o gym más completa. Con ellas podemos trabajar más tus ejercicios de glúteos, cuádriceps y pierna.",
@@ -73,6 +77,7 @@ export const products = [
     },
     {
         id: "mat",
+        sufix: "el",
         image: mat,
         title: "Tapete para ejercicio",
         description: "Al obtener tu tapete de ejercicio nos brindará más soporte al momento de realizar nuestra rutina de entrenamiento para piernas, abdomen y glúteos, tendremos más resistencia. Ayudará a que evitemos lastimarnos obteniendo más higiene al realizar ejercicio.",
@@ -86,6 +91,7 @@ export const products = [
     },
     {
         id: "watch",
+        sufix: "el",
         image: watch,
         title: "Reloj Inteligente Y68",
         description: "Tu reloj inteligente nos ayudará a que llevemos un control exacto de tus calorías. Para poder cumplir con tus requerimientos diarios en cuanto a tu Plan. Llevaremos el conteo de tus pasos y podrás ver que tan activo estás durante el día.También podremos monitorear tu calidad del sueño ya que el descanso es muy importante para este estilo de vida.",
