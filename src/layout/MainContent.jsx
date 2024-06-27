@@ -25,7 +25,7 @@ import app from '../images/app-mobile.webp'
 
 
 export default function MainContent() {
-    const whatsappUrl = "https://api.whatsapp.com/send?phone=5215587705973&text=%F0%9F%98%80%20Hola%20Ana!%252C%20quisiera%20adquirir%20"
+    const whatsappUrl = "https://api.whatsapp.com/send?phone=5215587705973&text=Hola Ana! 😀 quisiera adquirir "
 
     return (
         <main className="px-8 my-[50px] grid gap-8">
@@ -66,10 +66,7 @@ export default function MainContent() {
                             <CardFooter>
                                 <a href={whatsappUrl + plan.sufix + `%20${plan.title}`} target="_blank" rel="noopener noreferrer" className="w-full ">
 
-                                    <a href={whatsappUrl + plan.sufix + `%20${plan.title}`} target="_blank" rel="noopener noreferrer" className="w-full ">
-
-                                        <Button className=" w-full font-bold text-base">Adquirir</Button>
-                                    </a>
+                                    <Button className=" w-full font-bold text-base">Adquirir</Button>
                                 </a>
                             </CardFooter>
                         </Card>
