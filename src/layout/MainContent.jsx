@@ -50,9 +50,9 @@ export default function MainContent() {
                             <CardHeader>
                                 {index === 0 && <Badge className="w-fit bg-[#9747FF] text-[13px] mb-4 ">Más Popular</Badge>}
                                 <div>
-                                    <img className="mb-[21px]" src={plan.image} alt={plan.title} />
-                                    <p className="text-2xl font-bold">{plan.title}</p>
+                                    <img className="mb-[21px] min-w-[250px] min-h-[160px] " src={plan.image} alt={plan.title} />
                                 </div>
+                                <p className="text-2xl font-bold">{plan.title}</p>
                             </CardHeader>
                             <CardContent>
                                 <p className="font-bold text-lg mb-4">Incluye: </p>
@@ -87,7 +87,7 @@ export default function MainContent() {
                 <Card className="mb-4 border-gray-200 shadow-lg " id="app">
                     <CardHeader>
 
-                        <img className="mb-[21px]" src={app} alt="Applicacion de Seguimiento" />
+                        <img className="mb-[21px] min-w-[250px] min-h-[160px]" src={app} alt="Applicacion de Seguimiento" />
                         <p className="text-2xl font-bold">App de Seguimiento</p>
 
                     </CardHeader>

@@ -1,9 +1,9 @@
 import salad from '../images/salad-mobile.webp'
 import food from '../images/food-mobile.webp'
 import excercise from '../images/excercise-mobile.webp'
-import bands from '../images/bands-mobile.webp'
+import bands from '../images/bands-mobile.jpg'
 import mat from '../images/mat-mobile.webp'
-import watch from '../images/watch-mobile.webp'
+import watch from '../images/watch-mobile.jpg'
 
 export const plans = [
     {
