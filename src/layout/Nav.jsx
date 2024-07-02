@@ -34,14 +34,14 @@ export default function Nav() {
 
     return (
         <nav className=" bg-white flex justify-between h-[60px] items-center px-8 py-[14px] shadow-md sticky top-0">
-            <FitByAnaLogo className="min-h-[45px] min-w-[45px] max-h-[55px] max-w-[55px]" />
+            <FitByAnaLogo className="h-[45px] w-[45px]" />
 
 
             <Sheet open={sheetOpen} onOpenChange={setSheetOpen}>
                 <SheetTrigger>
                     <Button variant="ghost" size="icon" className="flex">
 
-                        <BarsIcon className="min-h-[32px] min-w-[32px] max-h-[55px] max-w-[55px] stroke-textColor" />
+                        <BarsIcon className="h-[35px] w-[35px] stroke-textColor" />
                     </Button>
                 </SheetTrigger>
                 <SheetContent className="w-[350px]">
