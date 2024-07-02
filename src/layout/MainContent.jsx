@@ -46,7 +46,7 @@ export default function MainContent() {
                 <p className="text-center text-primary font-bold text-2xl mb-4">Rutina y Plan de Alimentación</p>
                 {plans.map((plan, index) => (
                     <>
-                        <Card key={index} className="mb-4 border-gray-200 shadow-lg max-w-3xl mx-h-3xl">
+                        <Card key={index} className="mb-4 border-gray-200 shadow-lg max-w-3xl max-h-3xl">
                             <CardHeader>
                                 {index === 0 && <Badge className="w-fit bg-[#9747FF] text-[13px] mb-4 ">Más Popular</Badge>}
                                 <div>
@@ -99,7 +99,7 @@ export default function MainContent() {
 
             <section className="flex flex-col items-center">
                 <p className="text-center text-primary font-bold text-2xl mb-4">Productos</p>
-                <Card className="mb-4 border-gray-200 shadow-lg max-w-3xl mx-h-3xl" id="app">
+                <Card className="mb-4 border-gray-200 shadow-lg max-w-3xl max-h-3xl" id="app">
                     <CardHeader>
 
                         <img className="mb-[21px]" src={app} alt="Applicacion de Seguimiento" />
@@ -142,7 +142,7 @@ export default function MainContent() {
 
                 {products.map((product, index) => (
                     <>
-                        <Card key={index} className="mb-4 border-gray-200 shadow-lg max-w-3xl mx-h-3xl" id={product.id}>
+                        <Card key={index} className="mb-4 border-gray-200 shadow-lg max-w-3xl max-h-3xl" id={product.id}>
                             <CardHeader>
                                 <Badge className="w-fit mt-4 bg-[#9747FF] text-[13px] mb-4">Envío Gratis</Badge>
                                 <div className="flex justify-center">
