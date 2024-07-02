@@ -29,9 +29,9 @@ export default function MainContent() {
 
     return (
         <main className="px-8 my-[50px] grid gap-8">
-            <section className="mb-[121px]" id='about-me' >
+            <section className="mb-[121px] max-w-[470px]" id='about-me' >
                 <p className="text-2xl font-bold text-primary mb-5">¡Hola!</p>
-                <p className="text-base font-medium mb-5 text-balance">
+                <p className="text-base font-medium mb-5 text-pretty">
                     <span className="font-bold">Soy Ana Carmona</span> y comencé en el mundo del ejercicio a los 15 años. Lo que empezó como una visita al gimnasio se convirtió en una pasión por un estilo de vida saludable. Descubrí que cuidar mi bienestar físico, mental y emocional era fundamental, y compartir esto con otros se volvió mi misión. Este proyecto busca motivar y ayudar a mejorar los hábitos alimenticios y de ejercicio, demostrando que el esfuerzo vale la pena para nuestra salud.
 
                 </p>
@@ -42,25 +42,40 @@ export default function MainContent() {
             </section>
 
 
-            <section id='plans'>
+            <section id='plans' className="flex flex-col items-center">
                 <p className="text-center text-primary font-bold text-2xl mb-4">Rutina y Plan de Alimentación</p>
                 {plans.map((plan, index) => (
                     <>
-                        <Card key={index} className="mb-4 border-gray-200 shadow-lg">
+                        <Card key={index} className="mb-4 border-gray-200 shadow-lg max-w-3xl mx-h-3xl">
                             <CardHeader>
                                 {index === 0 && <Badge className="w-fit bg-[#9747FF] text-[13px] mb-4 ">Más Popular</Badge>}
                                 <div>
-                                    <img className="mb-[21px] min-w-[250px] min-h-[160px] " src={plan.image} alt={plan.title} />
+                                    <img className="mb-[21px]" src={plan.image} alt={plan.title} />
                                 </div>
-                                <p className="text-2xl font-bold">{plan.title}</p>
                             </CardHeader>
                             <CardContent>
-                                <p className="font-bold text-lg mb-4">Incluye: </p>
-                                <ul className="my-6 ml-6 list-disc [&>li]:mt-2">
-                                    {plan.includes.map((include, index) => (
-                                        <li key={index} className=" font-medium">{include}</li>
-                                    ))}
-                                </ul>
+                                <p className="text-2xl font-bold mb-4">{plan.title}</p>
+                                <div>
+                                    <p className="font-bold text-lg mb-4">Incluye: </p>
+                                    <ul className="my-6 ml-6 list-disc [&>li]:mt-2">
+                                        {plan.includes.map((include, index) => (
+                                            <li key={index} className=" font-medium">{include}</li>
+                                        ))}
+                                    </ul>
+                                </div>
+                                {plan.alimentationTypes.length > 0 &&
+
+                                    <div>
+                                        <p className="font-bold text-lg mb-4">Objetivos de Alimentación:</p>
+                                        <ul className="my-6 ml-6 list-disc [&>li]:mt-2">
+                                            {plan.alimentationTypes.map((types, index) => (
+                                                <li key={index} className=" font-medium">{types}</li>
+                                            ))}
+                                        </ul>
+                                    </div>
+
+                                }
+
                                 <p className="text-[#828182] font-medium">En caso de presentar alguna Patología (Ej. Diabetes) o lesión se recomienda acudir previamente con un especialista.*</p>
                             </CardContent>
                             <CardFooter>
@@ -76,18 +91,18 @@ export default function MainContent() {
             </section>
 
 
-            <section>
+            <section className="flex flex-col items-center">
                 <blockquote className="mt-6 border-l-2 pl-6 italic text-secondary">
                     "Tu cuerpo es tu hogar. Hay que cuidarlo cada día. Yo estoy en ese camino, buscando mi mejor versión"
                 </blockquote>
             </section>
 
-            <section>
+            <section className="flex flex-col items-center">
                 <p className="text-center text-primary font-bold text-2xl mb-4">Productos</p>
-                <Card className="mb-4 border-gray-200 shadow-lg " id="app">
+                <Card className="mb-4 border-gray-200 shadow-lg max-w-3xl mx-h-3xl" id="app">
                     <CardHeader>
 
-                        <img className="mb-[21px] min-w-[250px] min-h-[160px]" src={app} alt="Applicacion de Seguimiento" />
+                        <img className="mb-[21px]" src={app} alt="Applicacion de Seguimiento" />
                         <p className="text-2xl font-bold">App de Seguimiento</p>
 
                     </CardHeader>
@@ -105,7 +120,7 @@ export default function MainContent() {
                         </ul>
                     </CardContent>
                     <CardFooter>
-                        <div className="flex flex-col items-center gap-4 w-full">
+                        <div className="flex flex-col items-center gap-4 w-full smd:flex-row smd:justify-center">
                             <GooglePlayButton
                                 url="https://play.google.com/store/apps/details?id=nutrimind.net.paginapaciente"
                                 theme={"light"}
@@ -127,13 +142,13 @@ export default function MainContent() {
 
                 {products.map((product, index) => (
                     <>
-                        <Card key={index} className="mb-4 border-gray-200 shadow-lg" id={product.id}>
+                        <Card key={index} className="mb-4 border-gray-200 shadow-lg max-w-3xl mx-h-3xl" id={product.id}>
                             <CardHeader>
                                 <Badge className="w-fit mt-4 bg-[#9747FF] text-[13px] mb-4">Envío Gratis</Badge>
-                                <div>
+                                <div className="flex justify-center">
                                     <img className="mb-[21px]" src={product.image} alt={product.title} />
-                                    <p className="text-2xl font-bold">{product.title}</p>
                                 </div>
+                                <p className="text-2xl font-bold">{product.title}</p>
                             </CardHeader>
                             <CardContent>
                                 <p className="text-lg mb-4">{product.description}</p>
@@ -156,9 +171,9 @@ export default function MainContent() {
                 ))}
             </section>
 
-            <section id='frecuent-questions'>
+            <section id='frecuent-questions' className=" ">
                 <p className="text-center text-primary font-bold text-2xl mb-4">Preguntas frecuentes</p>
-                <Accordion type="single" collapsible className="w-full">
+                <Accordion type="single" collapsible className="w -full">
                     <AccordionItem value="item-1">
                         <AccordionTrigger className="font-medim">¿Qué es Fit By Ana?</AccordionTrigger>
                         <AccordionContent className="font-medium">

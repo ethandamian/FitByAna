@@ -79,6 +79,9 @@ module.exports = {
     fontFamily: {
       sans: ["Poppins"],
     },
+    screens: {
+      'smd': '540px'
+    }
   },
   plugins: [require("tailwindcss-animate")],
 }
