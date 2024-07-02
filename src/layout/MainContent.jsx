@@ -120,7 +120,7 @@ export default function MainContent() {
                         </ul>
                     </CardContent>
                     <CardFooter>
-                        <div className="flex flex-col items-center gap-4 w-full smd:flex-row smd:justify-center">
+                        <div className="flex flex-col items-center gap-4 w-full">
                             <GooglePlayButton
                                 url="https://play.google.com/store/apps/details?id=nutrimind.net.paginapaciente"
                                 theme={"light"}
