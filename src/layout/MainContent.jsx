@@ -102,7 +102,7 @@ export default function MainContent() {
                 <Card className="mb-4 border-gray-200 shadow-lg max-w-3xl max-h-3xl" id="app">
                     <CardHeader>
 
-                        <img className="mb-[21px]" src={app} alt="Applicacion de Seguimiento" />
+                        <img className="mb-[21px] max-h-[470.656px] max-w-full" src={app} alt="Applicacion de Seguimiento" />
                         <p className="text-2xl font-bold">App de Seguimiento</p>
 
                     </CardHeader>
