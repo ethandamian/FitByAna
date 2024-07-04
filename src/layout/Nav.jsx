@@ -39,7 +39,7 @@ export default function Nav() {
 
             <Sheet open={sheetOpen} onOpenChange={setSheetOpen}>
                 <SheetTrigger>
-                    <Button variant="ghost" size="icon" className="flex">
+                    <Button variant="ghost" size="icon" className="flex focus:outline-none">
 
                         <BarsIcon className="h-[35px] w-[35px] stroke-textColor" />
                     </Button>
