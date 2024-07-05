@@ -94,7 +94,7 @@ export const products = [
         sufix: "el",
         image: watch,
         title: "Reloj Inteligente Y68",
-        description: "Tu reloj inteligente nos ayudará a que llevemos un control exacto de tus calorías. Para poder cumplir con tus requerimientos diarios en cuanto a tu Plan. Llevaremos el conteo de tus pasos y podrás ver que tan activo estás durante el día.También podremos monitorear tu calidad del sueño ya que el descanso es muy importante para este estilo de vida.",
+        description: "Tu reloj inteligente nos ayudará a que llevemos un control exacto de tus calorías. Para poder cumplir con tus requerimientos diarios en cuanto a tu Plan. Llevaremos el conteo de tus pasos y podrás ver que tan activo estás durante el día. También podremos monitorear tu calidad del sueño ya que el descanso es muy importante para este estilo de vida.",
         subtitle: "Beneficios:",
         bulletPoints: [
             "Monitoreo de la actividad física.",
