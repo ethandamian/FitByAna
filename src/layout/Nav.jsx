@@ -64,7 +64,7 @@ export default function Nav() {
                         <DropdownMenu open={isOpenDropDown} onOpenChange={setIsOpenDropDown}>
                             <DropdownMenuTrigger asChild >
                                 <div className="flex items-center cursor-pointer">
-                                    <span className={`font-bold text-base mr-[14px] lg:text-lg  ${isOpenDropDown ? 'text-secondary' : 'text-primary'}`}>Productos</span>
+                                    <span className={`font-bold text-base mr-[14px] xl:text-lg  ${isOpenDropDown ? 'text-secondary' : 'text-primary'}`}>Productos</span>
                                     {isOpenDropDown ? <ChevronUp className={`size-4 ${isOpenDropDown ? 'stroke-secondary' : 'stroke-primary'}`} /> : <ChevronDown className={`size-4 ${isOpenDropDown ? 'stroke-secondary' : 'stroke-primary'}`} />}
                                 </div>
                             </DropdownMenuTrigger>
