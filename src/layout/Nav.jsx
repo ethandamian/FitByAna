@@ -39,6 +39,7 @@ import ChevronUp from "@/icons/ChevronUp";
 
 export default function Nav() {
     const [isOpen, setIsOpen] = useState(false)
+    const [isOpenDropDown, setIsOpenDropDown] = useState(false)
     const [sheetOpen, setSheetOpen] = useState(false)
 
     const handleLinkClick = () => {
@@ -60,11 +61,11 @@ export default function Nav() {
                     </li>
                     <li><Link to="#plans" className="font-bold text-base text-primary xl:text-lg" smooth>Rutina y Plan de Alimentación</Link></li>
                     <li>
-                        <DropdownMenu open={isOpen} onOpenChange={setIsOpen}>
+                        <DropdownMenu open={isOpenDropDown} onOpenChange={setIsOpenDropDown}>
                             <DropdownMenuTrigger asChild >
                                 <div className="flex items-center cursor-pointer">
-                                    <span className={`font-bold text-base mr-[14px] lg:text-lg  ${isOpen ? 'text-secondary' : 'text-primary'}`}>Productos</span>
-                                    {isOpen ? <ChevronUp className={`size-4 ${isOpen ? 'stroke-secondary' : 'stroke-primary'}`} /> : <ChevronDown className={`size-4 ${isOpen ? 'stroke-secondary' : 'stroke-primary'}`} />}
+                                    <span className={`font-bold text-base mr-[14px] lg:text-lg  ${isOpenDropDown ? 'text-secondary' : 'text-primary'}`}>Productos</span>
+                                    {isOpenDropDown ? <ChevronUp className={`size-4 ${isOpenDropDown ? 'stroke-secondary' : 'stroke-primary'}`} /> : <ChevronDown className={`size-4 ${isOpenDropDown ? 'stroke-secondary' : 'stroke-primary'}`} />}
                                 </div>
                             </DropdownMenuTrigger>
                             <DropdownMenuContent className="w-fit gap-4">
